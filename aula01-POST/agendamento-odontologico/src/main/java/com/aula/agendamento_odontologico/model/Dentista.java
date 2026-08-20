@@ -1,5 +1,6 @@
 package com.aula.agendamento_odontologico.model;
 
+import com.aula.agendamento_odontologico.dto.DadosCadastroDentista;
 import com.aula.agendamento_odontologico.enums.Especialidade;
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,5 +25,11 @@ public class Dentista {
     private Endereco endereco;
 
 
-
+    public Dentista(DadosCadastroDentista dadosDentista) {
+        this.nome = dadosDentista.nome();
+        this.email = dadosDentista.email();
+        this.cro = dadosDentista.cro();
+        this.especialidade = dadosDentista.especialidade();
+        this.endereco = new Endereco(dadosDentista.endereco());
+    }
 }
