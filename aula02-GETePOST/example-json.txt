@@ -1,0 +1,16 @@
+{
+	"nome" : "João Kleber",
+	"email" : "joaokleber@aula.odont",
+	"cro" : "123456",
+	"especialidade" : "CLINICO_GERAL",
+	"endereco" : {
+		"logradouro" : "Rua 1",
+		"bairro" : "bairro",
+		"cep" : "123456",
+		"cidade" : "Mogi",
+		"uf" : "SP",
+		"numero" : "1",
+		"complemento" : ""
+	}
+	
+}

@@ -17,6 +17,6 @@ public record DadosCadastroDentista(
         Especialidade especialidade,
         @NotNull
         @Valid
-        DtoEndereco endereco
+        Endereco endereco
 ) {
 }
