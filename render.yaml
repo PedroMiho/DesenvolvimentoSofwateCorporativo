@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: agendamento-odontologico
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Aula03-DELETE/agendamento-odontologico/Dockerfile
+    dockerContext: ./Aula03-DELETE/agendamento-odontologico
+    healthCheckPath: /actuator/health
+    autoDeployTrigger: off
+    envVars:
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JPA_SHOW_SQL
+        value: "false"
+      - key: JPA_FORMAT_SQL
+        value: "false"
+    buildFilter:
+      paths:
+        - Aula03-DELETE/agendamento-odontologico/**
+        - render.yaml
